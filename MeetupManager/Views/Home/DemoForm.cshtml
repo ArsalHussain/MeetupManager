@@ -1,0 +1,288 @@
+﻿
+@{
+    ViewBag.Title = "DemoForm";
+}
+
+<div class="container">
+    <!-- Breadcrumbs line -->
+    <div class="crumbs">
+        <ul id="breadcrumbs" class="breadcrumb">
+            <li>
+                <i class="icon-home"></i>
+                <a href="index.html">Dashboard</a>
+            </li>
+            <li class="current">
+                <a href="pages_calendar.html" title="">Calendar</a>
+            </li>
+        </ul>
+
+        <ul class="crumb-buttons">
+            <li><a href="charts.html" title=""><i class="icon-signal"></i><span>Statistics</span></a></li>
+            <li class="dropdown">
+                <a href="#" title="" data-toggle="dropdown"><i class="icon-tasks"></i><span>Users <strong>(+3)</strong></span><i class="icon-angle-down left-padding"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="form_components.html" title=""><i class="icon-plus"></i>Add new User</a></li>
+                    <li><a href="tables_dynamic.html" title=""><i class="icon-reorder"></i>Overview</a></li>
+                </ul>
+            </li>
+            <li class="range">
+                <a href="#">
+                    <i class="icon-calendar"></i>
+                    <span></span>
+                    <i class="icon-angle-down"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /Breadcrumbs line -->
+    <!--=== Page Header ===-->
+    <div class="page-header">
+        <div class="page-title">
+            <h3>Form Validation</h3>
+            <span>Good morning, John!</span>
+        </div>
+
+        <!-- Page Stats -->
+        <ul class="page-stats">
+            <li>
+                <div class="summary">
+                    <span>New orders</span>
+                    <h3>17,561</h3>
+                </div>
+                <div id="sparkline-bar" class="graph sparkline hidden-xs">20,15,8,50,20,40,20,30,20,15,30,20,25,20</div>
+                <!-- Use instead of sparkline e.g. this:
+                <div class="graph circular-chart" data-percent="73">73%</div>
+                -->
+            </li>
+            <li>
+                <div class="summary">
+                    <span>My balance</span>
+                    <h3>$21,561.21</h3>
+                </div>
+                <div id="sparkline-bar2" class="graph sparkline hidden-xs">20,15,8,50,20,40,20,30,20,15,30,20,25,20</div>
+            </li>
+        </ul>
+        <!-- /Page Stats -->
+    </div>
+    <!-- /Page Header -->
+    <!--=== Page Content ===-->
+    <div class="row">
+        <!--=== Validation Example 1 ===-->
+        <div class="col-md-6">
+            <div class="widget box">
+                <div class="widget-header">
+                    <h4><i class="icon-reorder"></i> Validation Example 1</h4>
+                </div>
+                <div class="widget-content">
+                    <form class="form-horizontal row-border" id="validate-1" action="#">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Required <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="req1" class="form-control required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Email <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="email1" class="form-control required email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">URL <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="url1" class="form-control required url">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Password <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="password" name="pass1" class="form-control required" minlength="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Confirm Password <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="password" name="cpass1" class="form-control required" minlength="5" equalTo="[name='pass1']">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Round Number <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="digits1" class="form-control required digits">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="submit" value="Validate Me" class="btn btn-primary pull-right">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /Validation Example 1 -->
+        </div>
+
+        <!--=== Validation Example 2 ===-->
+        <div class="col-md-6">
+            <div class="widget box">
+                <div class="widget-header">
+                    <h4><i class="icon-reorder"></i> Validation Example 2</h4>
+                </div>
+                <div class="widget-content">
+                    <form class="form-horizontal row-border" id="validate-2" action="#">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Field [min length 5] <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="minl1" class="form-control required" minlength="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Field [max length 5] <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="maxl1" class="form-control required" maxlength="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Field [length 5-10] <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="rangel1" class="form-control required" rangelength="5, 10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Number [min 5] <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="min1" class="form-control required digits" min="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Number [max 5] <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="max1" class="form-control required digits" max="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Number [5-10] <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="range1" class="form-control required digits" range="5, 10">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="submit" value="Validate Me" class="btn btn-primary pull-right">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /Validation Example 2 -->
+    </div>
+
+    <div class="row">
+        <!--=== Validation Example 3 ===-->
+        <div class="col-md-6">
+            <div class="widget box">
+                <div class="widget-header">
+                    <h4><i class="icon-reorder"></i> Validation Example 3</h4>
+                </div>
+                <div class="widget-content">
+                    <form class="form-horizontal row-border" id="validate-3" action="#">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Radio Button <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <label class="radio"><input type="radio" name="gender" class="required"> Male</label>
+                                <label class="radio"><input type="radio" name="gender"> Female</label>
+                                <label for="gender" class="has-error help-block" generated="true" style="display:none;"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Checkbox <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <label class="checkbox"><input type="checkbox" name="sport" class="required"> Soccer</label>
+                                <label class="checkbox"><input type="checkbox" name="sport"> Badminton</label>
+                                <label class="checkbox"><input type="checkbox" name="sport"> Tennis</label>
+                                <label for="sport" class="has-error help-block" generated="true" style="display:none;"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">File <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <input type="file" name="file1" class="required" accept="image/*" data-style="fileinput" data-inputsize="medium">
+                                <p class="help-block">Images only (image/*)</p>
+                                <label for="file1" class="has-error help-block" generated="true" style="display:none;"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Dropdown <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <select name="dd1" class="form-control required">
+                                    <option value=""></option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="submit" value="Validate Me" class="btn btn-primary pull-right">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /Validation Example 3 -->
+        <!--=== Validation Example 4 ===-->
+        <div class="col-md-6">
+            <div class="widget box">
+                <div class="widget-header">
+                    <h4><i class="icon-reorder"></i> Validation Example 4</h4>
+                </div>
+                <div class="widget-content">
+                    <form class="form-horizontal row-border" id="validate-4" action="#">
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Radio Button <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <label class="radio"><input type="radio" name="gender" class="required uniform"> Male</label>
+                                <label class="radio"><input type="radio" name="gender" class="uniform"> Female</label>
+                                <label for="gender" class="has-error help-block" generated="true" style="display:none;"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Checkbox <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <label class="checkbox"><input type="checkbox" name="sport" class="required uniform"> Soccer</label>
+                                <label class="checkbox"><input type="checkbox" name="sport" class="uniform"> Badminton</label>
+                                <label class="checkbox"><input type="checkbox" name="sport" class="uniform"> Tennis</label>
+                                <label for="sport" class="has-error help-block" generated="true" style="display:none;"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Advanced Select List <span class="required">*</span></label>
+                            <div class="col-md-9 clearfix">
+                                <select name="chosen1" class="col-md-12 select2 full-width-fix required">
+                                    <option></option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label for="chosen1" generated="true" class="has-error help-block" style="display:none;"></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Spinner <span class="required">*</span></label>
+                            <div class="col-md-9">
+                                <div>
+                                    <input type="text" name="spin1" value="3" class="form-control spinner required" min="5" max="10">
+                                </div>
+                                <p class="help-block">Must be greater than 5 or less than 10.</p>
+                                <label for="spinner-validation" generated="true" class="has-error help-block" style="display:none;"></label>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <input type="submit" value="Validate Me" class="btn btn-primary pull-right">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- /Validation Example 4 -->
+    </div>
+    <!-- /Page Content -->
+</div>
+<!-- /.container -->

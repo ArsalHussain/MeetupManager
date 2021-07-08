@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetupManager", "MeetupManager\MeetupManager.csproj", "{D6919DAE-0231-490D-BC54-4A83BD59D433}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6919DAE-0231-490D-BC54-4A83BD59D433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6919DAE-0231-490D-BC54-4A83BD59D433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6919DAE-0231-490D-BC54-4A83BD59D433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6919DAE-0231-490D-BC54-4A83BD59D433}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5681F6C5-45D0-4654-9F32-19A59B6A3029}
+	EndGlobalSection
+EndGlobal
